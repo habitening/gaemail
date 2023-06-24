@@ -1,0 +1,12 @@
+runtime: python311
+app_engine_apis: true
+
+inbound_services:
+- mail
+- mail_bounce
+
+handlers:
+- url: /.*
+  secure: always
+  script: auto
+  redirect_http_response_code: 301
